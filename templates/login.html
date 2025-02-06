@@ -1,0 +1,27 @@
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+   Login Page
+  </title>
+  <link rel="stylesheet" href="../static/css/style.css">
+ </head>
+ <body>
+  <div class="login-container">
+   <img alt="Logo preto" height="50" src="https://jeskap.b-cdn.net/wp-content/uploads/2023/09/Logo-Horizontal-01_Alta.png" width="200"/>
+  <form action="/auth" method="POST">
+
+    <label for="username">Usuário:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  </div>
+
+ </body>
+</html>
