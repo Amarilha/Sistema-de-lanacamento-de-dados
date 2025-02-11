@@ -18,20 +18,27 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-console.log(auth);
 
-// Função de login
-window.login = function () {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
 
-  signInWithEmailAndPassword(auth, email, password)
+//submit button
+const submitButton = document.getElementById('login-button');
+submitButton.addEventListener("click", function(event){
+    event.preventDefault()
+
+    //inputs
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+     
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-          console.log("Usuário autenticado:", userCredential.user);
-          alert("Login bem-sucedido!");
+        // Signed in 
+        const user = userCredential.user;
+        window.location.href = "admin_dashboard.html";
+        // ...
       })
       .catch((error) => {
-          console.error("Erro ao fazer login:", error.message);
-          alert("Erro: " + error.message);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
       });
-};
+    });
