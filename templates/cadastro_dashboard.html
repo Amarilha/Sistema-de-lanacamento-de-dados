@@ -6,8 +6,7 @@
    Login Page
   </title>
 
-  <link rel="stylesheet" href="../static/css/style.css">
-  <script type="module" src="/js/login.js"></script>
+  
   
  </head>  
  <body>
@@ -16,7 +15,7 @@
 
    
    <div class="radio-group" style="display: flex; gap: 10px; align-items: center;">
-    <label><input type="checkbox" id="admin" checked> Admin</label>
+    <label><input type="checkbox" id="admin" > Admin</label>
     <label><input type="radio" name="action"> novo</label>
     <label><input type="radio" name="action"> Alterar</label>
     <label><input type="radio" name="action"> Excluir</label>
@@ -26,14 +25,14 @@
 
 
 
-    <label for="email">Usuário:</label>
-    <input type="text" id="email" name="email" required>
+    <label for="cadastroemail">Usuário:</label>
+    <input type="text" id="cadastroemail" name="cadastroemail" required>
 
-    <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" required>
+    <label for="cadastropwd">Senha:</label>
+    <input type="password" id="cadastropwd" name="cadastropwd" required>
 
-    <label for="password">Confirmar Senha:</label>
-    <input type="password" id="password" name="password" required>
+    <label for="confirmarpwd">Confirmar Senha:</label>
+    <input type="password" id="confirmarpwd" name="confirmarpwd" required>
 
     <button type="submit" id="Cadastra">cadastrar</button>
 
@@ -41,5 +40,7 @@
 
   </div>
 
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script type="module" src="/js/cadastro.js"></script>
  </body>
 </html>
