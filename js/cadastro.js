@@ -1,10 +1,8 @@
-import { app, auth, db } from "./firebaseConfig.js";
+import { app, auth, db, firestore  } from "./firebaseConfig.js";
 import {createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+import { doc, setDoc } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
 
-console.log(app);
-console.log(auth);
-console.log(db);
+
 
 // Botão de cadastro
 const cadastroButton = document.getElementById('Cadastra');
@@ -26,11 +24,21 @@ cadastroButton.addEventListener("click", function(event) {
     console.log(excluir);
     console.log(cadastroEmail);
     console.log(cadastroPwd);
+
+
   // cadastrar novo usuários  
+
   createUserWithEmailAndPassword(auth, cadastroEmail, cadastroPwd)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    const userId = user.uid;
+    setDoc(doc(firestore, "users", userId), {
+      email: cadastroEmail,
+      admin: admin,
+    });
+
+
     // ...
   })
   .catch((error) => {
@@ -38,5 +46,6 @@ cadastroButton.addEventListener("click", function(event) {
     const errorMessage = error.message;
     // ..
   });
+
 
 });
