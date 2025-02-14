@@ -1,0 +1,46 @@
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+   Login Page
+  </title>
+
+  
+  
+ </head>  
+ <body>
+  <div class="login-container">
+   <img alt="Logo preto" height="50" src="https://jeskap.b-cdn.net/wp-content/uploads/2023/09/Logo-Horizontal-01_Alta.png" width="200"/>
+
+   
+   <div class="radio-group" style="display: flex; gap: 10px; align-items: center;">
+    <label><input type="checkbox" id="admin" > Admin</label>
+    <label><input type="radio" id="novo" name="action"> novo</label>
+    <label><input type="radio" id="alterar" name="action"> Alterar</label>
+    <label><input type="radio" id="excluir" name="action"> Excluir</label>
+    <a href="admin_dashboard.html" style="margin-left: 10px; color:white;" >Voltar</a>
+    </div>
+
+
+
+
+    <label for="cadastroemail">Usuário:</label>
+    <input type="text" id="cadastroemail" name="cadastroemail" required>
+
+    <label for="cadastropwd">Senha:</label>
+    <input type="password" id="cadastropwd" name="cadastropwd" required>
+
+    <label for="confirmarpwd">Confirmar Senha:</label>
+    <input type="password" id="confirmarpwd" name="confirmarpwd" required>
+
+    <button type="submit" id="Cadastra">cadastrar</button>
+
+ 
+
+  </div>
+
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script type="module" src="/js/cadastro.js"></script>
+ </body>
+</html>
