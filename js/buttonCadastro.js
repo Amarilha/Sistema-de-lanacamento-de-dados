@@ -1,6 +1,7 @@
 import {registerUser} from "./cadastro.js"
+import {getUserEmail} from "./excluir.js"
 
-const cadastroButton = document.getElementById('Cadastra');
+const cadastroButton = document.getElementById('Confirmar');
 cadastroButton.addEventListener("click", function(event) {
   event.preventDefault(); // Evita o comportamento padrão do botão
   
@@ -20,6 +21,6 @@ cadastroButton.addEventListener("click", function(event) {
         console.log('Alterando registro.');
     }
     if (excluir) {
-        console.log('Excluindo registro.');
+        excluirUser(cadastroEmail);
     }
 });
