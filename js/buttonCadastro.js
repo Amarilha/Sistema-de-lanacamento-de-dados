@@ -1,5 +1,5 @@
 import {registerUser} from "./cadastro.js"
-import {getUserEmail} from "./excluir.js"
+import {excluirUser} from "./excluir.js"
 
 const cadastroButton = document.getElementById('Confirmar');
 cadastroButton.addEventListener("click", function(event) {

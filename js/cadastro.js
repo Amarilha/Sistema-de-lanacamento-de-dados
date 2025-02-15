@@ -20,6 +20,18 @@ export function registerUser(cadastroEmail, cadastroPwd, confirmarPwd) {
       admin: admin,
     });
 
+    // Exibe a mensagem de sucesso
+    document.getElementById('mensagem').textContent = 'Usuário cadastrado com sucesso!';
+    // cor da mensagem
+    document.getElementById('mensagem').style.color = '#28a745';
+
+    // Limpa os campos de email e senha
+    document.getElementById('cadastroemail').value = '';
+    document.getElementById('cadastropwd').value = '';
+    document.getElementById('confirmarpwd').value = '';
+
+    // Opcional: Focar no campo de email após o cadastro
+    document.getElementById('cadastroemail').focus();
 
     // ...
   })
